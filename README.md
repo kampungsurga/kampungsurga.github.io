@@ -12,7 +12,7 @@ hugo server
 
 ### 1.2 Rilis
 
-Mempublikasi ke publik
+- [Host on GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
 ## Diberdayakan dengan
 
