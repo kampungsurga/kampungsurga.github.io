@@ -1,0 +1,6 @@
+baseURL: https://kampungsurga.github.io/
+title: Kampung Surga
+languageCode: id-id
+canonifyURLs: true
+params:
+  subtitle: Catatan
