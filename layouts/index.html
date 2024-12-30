@@ -1,3 +1,24 @@
+{{ define "svg" }}
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+		<symbol id="archive" viewBox="0 0 16 16">
+			<path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+		</symbol>
+	</svg>
+{{ end }}
+
 {{ define "main" }}
-    <h1>Index</h1>
+	<div class="container">
+		<div class="py-5 border-bottom">
+			<div class="d-flex flex-row align-items-start column-gap-4">
+				<div>
+					<svg height="5em" width="5em" fill="currentColor" class="text-body-secondary"><use href="#archive"></use></svg>
+				</div>
+				<div>
+					<h1 class="mb-0">{{ .Page.Title }}</h1>
+					<div class="lead">{{ .Page.Params.description }}</div>
+				</div>
+			</div>
+		</div>
+		<div class="py-5 text-center fw-bold text-muted text-bg-light">Sedang dalam pengembangan</div>
+	</div>
 {{ end }}

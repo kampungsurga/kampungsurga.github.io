@@ -14,9 +14,21 @@ hugo server
 
 Laman diberdayakan dengan GitHub Pages.
 
+## 2. Konten
+
+Menambah Konten Baru
+
+```bash
+hugo new content [path] [flags]
+```
+
+- [COMMANDS: hugo new content](https://gohugo.io/commands/hugo_new_content/)
+- [CONTENT MANAGEMENT: Front matter](https://gohugo.io/content-management/front-matter/)
+
 ## Diberdayakan dengan
 
 - [GitHub Pages](https://pages.github.com/)
 - [Hugo](https://gohugo.io/)
 - [Git](https://git-scm.com/)
 - [EditorConfig](https://editorconfig.org/)
+- [Bootstrap](https://getbootstrap.com/)

@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="h-100" data-bs-theme="auto">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{ if .Page.Title }}{{ .Page.Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+	<meta name="description" content="{{ if .Page.Params.description }}{{ .Page.Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+	<meta name="generator" content="Hugo {{ hugo.Version }}" />
+
+	<link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
+	{{ block "stylesheet" . }}
+		<!-- stylesheet -->
+	{{ end }}
+
 </head>
-<body>
-    <!-- Code that all your templates share, like a header -->
-    {{ block "main" . }}
-        <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
+<body class="d-flex flex-column h-100">
+	{{ block "svg" . }}
+		<!-- embed icon and image vector based -->
+	{{ end }}
+
+	<!-- Code that all your templates share, like a header -->
+	{{ block "main" . }}
+		<!-- The part of the page that begins to differ between templates -->
+	{{ end }}
+
+	<footer class="mt-auto py-3 text-body-secondary text-center">kampungsurga.github.io</footer>
+
+	<script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="/assets/js/bootstrap-color-mode-toggler.js"></script>
+	
+	{{ block "scripts" . }}
+		<!-- javascript -->
+	{{ end }}
 
 </body>
 </html>
